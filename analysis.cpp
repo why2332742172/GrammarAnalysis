@@ -27,6 +27,10 @@ void analysis(){
         //如果X是非终结符
         else{
             //找到表项M[X][ip]
+            if(buffer.size() == 1 && buffer[0] == '$' && ip == "$" && stack.size() != 1){
+                cout << "ERROR!" << endl;
+                break;
+            }
             if(G.TABLE[X].at(ip).empty()){
                 cout << "ERROR!!!" << endl;
                 break;
