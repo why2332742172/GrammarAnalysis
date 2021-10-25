@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/2021why/bianyiyuanli/GrammarAnalysis/analysis.cpp
+header.h
+D:/2021why/bianyiyuanli/GrammarAnalysis/header.h
+
+D:/2021why/bianyiyuanli/GrammarAnalysis/grammar.h
+iostream
+-
+string
+-
+vector
+-
+map
+-
+algorithm
+-
+set
+-
+
+D:/2021why/bianyiyuanli/GrammarAnalysis/header.h
+grammar.h
+D:/2021why/bianyiyuanli/GrammarAnalysis/grammar.h
+
