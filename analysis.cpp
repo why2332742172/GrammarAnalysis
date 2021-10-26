@@ -27,11 +27,11 @@ void analysis(){
         //如果X是非终结符
         else{
             //找到表项M[X][ip]
-            if(ip == "$" && X != "$"){
-                cout << "ERROR!" << endl;
+            if(G.TABLE.find(X) == G.TABLE.end()){
+                cout << "ERROR!!!" << endl;
                 break;
             }
-            if(G.TABLE[X].at(ip).empty()){
+            if(G.TABLE[X].find(ip) == G.TABLE[X].end()){
                 cout << "ERROR!!!" << endl;
                 break;
             }
