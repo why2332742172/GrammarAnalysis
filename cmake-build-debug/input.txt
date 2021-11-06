@@ -1,0 +1,15 @@
+E
+E F A B T #
++ - * / ( ) n #
+E TA
+A +TA
+A -TA
+A ~
+T FB
+B *FB
+B /FB
+B ~
+F (E)
+F n
+#
+(n)+(n)+(n*n/n)
