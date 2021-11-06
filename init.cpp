@@ -7,6 +7,7 @@
 //完成文法的输入
 void input() {
     //首先输入文法起始符
+    freopen("input.txt", "r", stdin);
     cout << "Input S" << endl;
     string s;
     cin >> s;
@@ -19,9 +20,9 @@ void input() {
         G.N.push_back(input_s);
         cin >> input_s;
     }
-    for (const auto &item: G.N) {
-        cout << item << endl;
-    }
+//    for (const auto &item: G.N) {
+//        cout << item << endl;
+//    }
 
     //然后输入终结符
     cout << "Input T" << endl;
@@ -30,9 +31,9 @@ void input() {
         G.T.push_back(input_s);
         cin >> input_s;
     }
-    for (const auto &item: G.T) {
-        cout << item << endl;
-    }
+//    for (const auto &item: G.T) {
+//        cout << item << endl;
+//    }
 
     //然后输入产生式
     // ~ 代表空
@@ -46,9 +47,10 @@ void input() {
         G.P.value.push_back(value);
         cin >> key;
     }
-    for (int i = 0; i < G.P.key.size(); i++) {
-        cout << G.P.key[i] << "->" << G.P.value[i] << endl;
-    }
+    cin.clear();
+//    for (int i = 0; i < G.P.key.size(); i++) {
+//        cout << G.P.key[i] << "->" << G.P.value[i] << endl;
+//    }
 }
 
 

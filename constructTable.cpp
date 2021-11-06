@@ -68,4 +68,32 @@ void constructTable() {
 
 
     }
+    for (const auto &n_word : G.N){
+        //2021-11-6更改
+        //增加同步信息synch
+        //对于每个n_word 如果他的FOLLOW集中的元素对应在TABLE中为空 给他加上synch
+        for (const auto &item : G.FOLLOW[n_word]){
+            map<string,string> temp = G.TABLE[n_word];
+//            cout << n_word << endl;
+//            for (const auto &item2 : temp){
+//                cout << item2.first << endl;
+//            }
+            if(temp.find(item) == temp.end()){
+                //如果该FOLLOW集中的元素不存在于其table中 则加入synch
+                G.TABLE[n_word].insert(pair<string,string>(item,n_word + "->" + "synch"));
+                //cout << "synch:" << item << endl;
+            }
+        }
+
+        //2021-11-6更改
+        //增加错误信息error
+        //全部构造完之后 对于现在全部的还未加入的非终结符 给他加上error
+        for (const auto &item : G.T){
+            map<string,string> temp = G.TABLE[n_word];
+            if(temp.find(item) == temp.end()){
+                G.TABLE[n_word].insert(pair<string,string>(item,n_word + "->" + "error"));
+                //cout << "error:" << item << endl;
+            }
+        }
+    }
 }
