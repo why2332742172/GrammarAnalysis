@@ -27,12 +27,13 @@ int main() {
         cout << "}\n";
     }
     constructTable();
+
     cout << "TABLE:" << endl;
     for (const auto &item : G.TABLE){
+        cout << "---------------" << item.first << "---------------" << endl;
         for (const auto &item2 : item.second){
-            cout << "{ " << item.first << "-" <<item2.first << " : ( " << item2.second << " ) } ";
+            cout << "{ " << item.first << "-" <<item2.first << " : ( " << item2.second << " ) } " << endl;
         }
-        cout << "\n";
     }
 
     cout << "Input w:" << endl;
